@@ -4,6 +4,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mutoni/global.dart';
+import 'package:mutoni/view/home.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -114,7 +115,14 @@ class _MyHomePageState extends State<MyHomePage> {
             AnimatedOpacity(
               opacity: next ? 0.0 : 1.0,
               duration: const Duration(milliseconds: 1000),
-              child: button(context, 'Suivant', (){})
+              child: button(context, 'Suivant', (){
+                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context){
+                                    return Home();
+                                  })
+                              );
+              })
             )
           ],
         ),
