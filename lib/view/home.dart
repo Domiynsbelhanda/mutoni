@@ -167,7 +167,7 @@ class _Home extends State<Home> with TickerProviderStateMixin{
             controller: tabController,
             children: <Widget>[
               id == '' ? homeRiviere() : description(),
-              homeRiviere(),
+              auth.currentUser == null ? WelcomePage() : homeRiviere(),
               MapSample(riviere),
               homeRiviere(),
               auth.currentUser == null ? WelcomePage() : UserProfil(),

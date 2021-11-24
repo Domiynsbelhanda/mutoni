@@ -31,7 +31,7 @@ class _SignUpPageState extends State<SignUpPage> {
               padding: EdgeInsets.only(left: 0, top: 10, bottom: 10),
               child: Icon(Icons.keyboard_arrow_left, color: Colors.black),
             ),
-            Text('Back',
+            Text('Retour',
                 style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500))
           ],
         ),
@@ -97,19 +97,9 @@ class _SignUpPageState extends State<SignUpPage> {
         alignment: Alignment.center,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(5)),
-            boxShadow: <BoxShadow>[
-              BoxShadow(
-                  color: Colors.grey.shade200,
-                  offset: Offset(2, 4),
-                  blurRadius: 5,
-                  spreadRadius: 2)
-            ],
-            gradient: LinearGradient(
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-                colors: [Color(0xfffbb448), Color(0xfff7892b)])),
+            color: Colors.blueAccent,),
         child: Text(
-          'Register Now',
+          'S\'inscrire',
           style: TextStyle(fontSize: 20, color: Colors.white),
         ),
       ),
@@ -130,7 +120,7 @@ class _SignUpPageState extends State<SignUpPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Already have an account ?',
+              'Vous avez un compte ?',
               style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
             ),
             SizedBox(
@@ -139,7 +129,7 @@ class _SignUpPageState extends State<SignUpPage> {
             Text(
               'Login',
               style: TextStyle(
-                  color: Color(0xfff79c4f),
+                  color: Colors.blue,
                   fontSize: 13,
                   fontWeight: FontWeight.w600),
             ),
@@ -152,9 +142,9 @@ class _SignUpPageState extends State<SignUpPage> {
   Widget _emailPasswordWidget() {
     return Column(
       children: <Widget>[
-        _entryField("Username", nameController),
-        _entryField("Email id", emailController),
-        _entryField("Password", passwordController, isPassword: true),
+        _entryField("Nom d'utilisateur", nameController),
+        _entryField("Adresse Email", emailController),
+        _entryField("Mot de passe", passwordController, isPassword: true),
       ],
     );
   }
@@ -167,11 +157,6 @@ class _SignUpPageState extends State<SignUpPage> {
         height: height,
         child: Stack(
           children: <Widget>[
-            Positioned(
-              top: -MediaQuery.of(context).size.height * .15,
-              right: -MediaQuery.of(context).size.width * .4,
-              child: BezierContainer(),
-            ),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: SingleChildScrollView(
@@ -185,7 +170,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       height: 20,
                     ),
                     _submitButton(),
-                    SizedBox(height: height * .14),
+                    SizedBox(height: 16.0),
                     _loginAccountLabel(),
                   ],
                 ),

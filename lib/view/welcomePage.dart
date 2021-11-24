@@ -67,8 +67,7 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:SingleChildScrollView(
-        child:Container(
+      body: Container(
             padding: EdgeInsets.symmetric(horizontal: 20),
             height: MediaQuery.of(context).size.height,
             decoration: BoxDecoration(
@@ -85,9 +84,6 @@ class _WelcomePageState extends State<WelcomePage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 80,
-                ),
                 _submitButton(),
                 SizedBox(
                   height: 20,
@@ -99,7 +95,6 @@ class _WelcomePageState extends State<WelcomePage> {
               ],
             ),
           ),
-      ),
     );
   }
 }
